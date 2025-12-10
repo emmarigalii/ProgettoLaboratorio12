@@ -12,15 +12,15 @@ private:
     bool importante = false;
 
 public:
-    Note(const string n, const string t) : nome(n), testo(t) {}
+    Note(const string& n, const string& t) : nome(n), testo(t) {}
 
     bool IsBlocked() const { return bloccata; }
 
     bool IsImportante() const { return importante; }
 
-    const string getNome() const { return nome; }
+    const string& getNome() const { return nome; }
 
-    const string getTesto() const { return testo; }
+    const string& getTesto() const { return testo; }
 
 
     void Blocca() { bloccata = true; }
@@ -31,13 +31,13 @@ public:
 
     void NonImportante() { importante = false; }
 
-    void ModificaNota(string nuovotesto) {
+    void ModificaNota(string& nuovotesto) {
         if (!bloccata) testo = nuovotesto;
         else cout << "Nota bloccata, impossibile modificare.\n";
 
     }
 
-    void EliminaNota(){
+    void EliminaNota(string& nome){
         if (bloccata) cout<< "Nota bloccata, impossibile eliminare. \n";
         else{
             nome.clear();
@@ -56,7 +56,9 @@ class Collezione {
     list<shared_ptr<Note>> note;
 
 public:
-    Collezione(const string n): nome(n){}
+    Collezione(const string& n): nome(n){}
+
+    const string& getNome() const {return nome;}
 
     void AggiungiNota( shared_ptr<Note> nota){
         note.push_back(nota);
@@ -72,6 +74,8 @@ public:
 
     }
 
+    int size() const {return note.size(); }
+
 };
 
 
@@ -79,6 +83,24 @@ public:
 
 
 int main() {
-    std::cout << "Ciaooooo"<< std::endl;
+    //crazione collezioni
+    Collezione lavoro("lavoro");
+    Collezione casa("Casa");
+    Collezione importanti("Importanti");
+
+    //creazione note
+    auto n1 = make_shared<Note> ("Meeting", "Riunione alle 10");
+    auto n2 = make_shared<Note>("Spesa", "Latte, pane, pasta");
+
+    //aggiunta a collezioni
+    lavoro.AggiungiNota(n1);
+    casa.AggiungiNota(n2);
+
+    //aggiunta nota importante
+    importanti.AggiungiNota(n1);
+
+    n1->Blocca();
+    lavoro.EliminaNota(n1); //non deve essere eliminata
     return 0;
+
 }
