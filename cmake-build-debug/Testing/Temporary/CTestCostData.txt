@@ -1,0 +1,7 @@
+NoteTest.ModificaQuandoSbloccata 8 0.00387803
+NoteTest.NonModificaQuandoBloccata 8 0.00772776
+NoteTest.BloccaESblocca 8 0.00330622
+CollezioneTest.AggiungiNota 8 0.00873786
+CollezioneTest.EliminaNota 8 0.0145758
+CollezioneTest.EliminaNotaBloccata 8 0.0128887
+---

@@ -1,0 +1,4 @@
+"C:\Users\Samsung\AppData\Local\JetBrains\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Release "-DCMAKE_MAKE_PROGRAM=C:/Users/Samsung/AppData/Local/JetBrains/CLion 2022.3.2/bin/ninja/win/x64/ninja.exe" -G Ninja -S C:\Users\Samsung\ProgettoLaboraatorio12 -B C:\Users\Samsung\ProgettoLaboraatorio12\cmake-build-debug-forced
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/Samsung/ProgettoLaboraatorio12/cmake-build-debug-forced

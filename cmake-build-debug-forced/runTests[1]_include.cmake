@@ -1,0 +1,5 @@
+if(EXISTS "C:/Users/Samsung/ProgettoLaboraatorio12/cmake-build-debug-forced/runTests[1]_tests.cmake")
+  include("C:/Users/Samsung/ProgettoLaboraatorio12/cmake-build-debug-forced/runTests[1]_tests.cmake")
+else()
+  add_test(runTests_NOT_BUILT runTests_NOT_BUILT)
+endif()

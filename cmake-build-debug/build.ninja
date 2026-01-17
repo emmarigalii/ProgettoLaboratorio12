@@ -125,7 +125,7 @@ build cmake_object_order_depends_target_runTests: phony || cmake_object_order_de
 build CMakeFiles/runTests.dir/tests/NoteTest.cpp.obj: CXX_COMPILER__runTests_Debug C$:/Users/Samsung/ProgettoLaboraatorio12/tests/NoteTest.cpp || cmake_object_order_depends_target_runTests
   DEP_FILE = CMakeFiles\runTests.dir\tests\NoteTest.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu++23
-  INCLUDES = -IC:/Users/Samsung/ProgettoLaboraatorio12 -isystem C:/Users/Samsung/ProgettoLaboraatorio12/extern/googletest/googletest/include -isystem C:/Users/Samsung/ProgettoLaboraatorio12/extern/googletest/googletest
+  INCLUDES = -IC:/Users/Samsung/ProgettoLaboraatorio12/tests -IC:/Users/Samsung/ProgettoLaboraatorio12 -isystem C:/Users/Samsung/ProgettoLaboraatorio12/extern/googletest/googletest/include -isystem C:/Users/Samsung/ProgettoLaboraatorio12/extern/googletest/googletest
   OBJECT_DIR = CMakeFiles\runTests.dir
   OBJECT_FILE_DIR = CMakeFiles\runTests.dir\tests
 
